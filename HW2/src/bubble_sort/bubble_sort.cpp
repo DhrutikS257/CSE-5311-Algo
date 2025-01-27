@@ -12,16 +12,12 @@ void print(uint32_t *arr, int size) {
 }
 
 void bubbleSort(uint32_t *arr, int size) {
-    for(int i = 0; i < size; i++) {
-        int curMin = i;
-
-        for(int j = i+1; j < size; j++) {
-            if(arr[j] < arr[curMin]) 
-                curMin = j;
+    for(int i = 1; i < size; i++) {
+        for(int j = 0; j < size - 1; j++) {
+            if (arr[j] > arr[j+1]) {
+                SWAP(arr[j],arr[j+1])
+            }
         }
-        
-        if(curMin != i)
-            SWAP(arr[i],arr[curMin]);
     }
 }
 
