@@ -1,0 +1,28 @@
+services:
+  insertion_sort:
+    build:
+      context: .
+      dockerfile: src/insertion_sort/Dockerfile
+    volumes:
+      - ./src:/app/src  # Bind mount for live editing
+    command: ["./build/main"]
+  
+  selection_sort:
+    build:
+      context: .
+      dockerfile: src/selection_sort/Dockerfile
+    volumes:
+      - ./src:/app/src  # Bind mount for live editing
+    command: ["./build/main"]
+    depends_on:
+      - insertion_sort 
+  
+  bubble_sort:
+    build:
+      context: .
+      dockerfile: src/bubble_sort/Dockerfile
+    volumes:
+      - ./src:/app/src  # Bind mount for live editing
+    command: ["./build/main"]
+    depends_on:
+      - selection_sort
