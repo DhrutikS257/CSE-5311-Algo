@@ -5,14 +5,14 @@ using namespace std;
 using namespace chrono;
 
 void benchmarkSort(uint32_t* arr, int size){
-    cout << "Selection Sort (Before): " << size << endl;
-    // print(arr, size);
+    cout << "Selection Sort (Before): ";
+    print(arr, size);
     high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
     selectionSort(arr, size);
     high_resolution_clock::time_point end = std::chrono::high_resolution_clock::now();
     duration<double, std::milli> duration = end - start;
     cout << "Selection Sort (After): ";
-    // print(arr, size);
+    print(arr, size);
     cout << "Time taken: " << duration.count() << " ms\n" << endl;
 }
 

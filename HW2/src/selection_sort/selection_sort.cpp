@@ -5,14 +5,16 @@ using namespace std;
 #define SWAP(a, b) { uint32_t temp = a; a = b; b = temp; }
 
 void print(uint32_t *arr, int size) {
-    for(int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
+    if (size <= 20){
+        for(int i = 0; i < size; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
 }
 
 void selectionSort(uint32_t *arr, int size) {
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size - 1; i++) {
         int curMin = i;
 
         for(int j = i+1; j < size; j++) {

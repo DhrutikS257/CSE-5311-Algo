@@ -5,10 +5,12 @@ using namespace std;
 #define SWAP(a, b) { uint32_t temp = a; a = b; b = temp; }
 
 void print(uint32_t *arr, int size) {
-    for(int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
+    if (size <= 20){
+        for(int i = 0; i < size; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
 }
 
 void insertionSort(uint32_t *arr, int size) {
