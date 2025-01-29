@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: src/insertion_sort/Dockerfile
     volumes:
-      - ./src:/app/src  # Bind mount for live editing
+      - ./src:/app/src 
     command: ["./build/main"]
   
   selection_sort:
@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: src/selection_sort/Dockerfile
     volumes:
-      - ./src:/app/src  # Bind mount for live editing
+      - ./src:/app/src 
     command: ["./build/main"]
     depends_on:
       - insertion_sort 
@@ -22,7 +22,7 @@ services:
       context: .
       dockerfile: src/bubble_sort/Dockerfile
     volumes:
-      - ./src:/app/src  # Bind mount for live editing
+      - ./src:/app/src
     command: ["./build/main"]
     depends_on:
       - selection_sort
