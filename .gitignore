@@ -1,1 +1,3 @@
 .vscode
+**/path/to/venv
+**/venv/

@@ -15,7 +15,7 @@ function x = fn(n)
 $T(n) = 1 + n^2$ and time complexity is $\theta(n^2)$
 
 2. Plot
-![Runtime of f(n) vs n](/runtime_plot.png)
+![Runtime of f(n) vs n](./runtime_plot.png)
 
 3. Get time complexity for $\Omega$, $\theta$, and $O$
     * Lower Bound: For $n ≥ 1$, $T(n) ≥ n^2$, Therefore the lower bound is $\Omega(n^2)$
