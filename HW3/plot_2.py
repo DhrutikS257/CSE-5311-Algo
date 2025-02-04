@@ -5,9 +5,11 @@ from scipy.optimize import curve_fit
 
 def f(n):
     x = 1
+    y = 1
     for i in range(1, n+1):
         for j in range(1, n+1):
             x = x + 1
+            y = i + j
     return x
 
 
@@ -36,4 +38,3 @@ plt.title('Runtime of f(n) vs. n')
 plt.legend()
 plt.grid(True)
 plt.show()
-
