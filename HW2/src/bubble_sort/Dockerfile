@@ -13,10 +13,10 @@ COPY src/bubble_sort/CMakeLists.txt /app/src/bubble_sort/CMakeLists.txt
 COPY src/bubble_sort /app/src/bubble_sort
 
 # Pre-build step to generate build files
-RUN mkdir -p build && cd build && cmake ../src/bubble_sort
+RUN  cmake -S src/bubble_sort -B build && cmake --build build
 
 # Build the C++ code
-RUN cd build && make
+# RUN cd build && make
 
 # Set the default command to run the compiled program
 CMD ["./build/main"]
