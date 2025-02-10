@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int fib(uint n) {
+    cout << "fib(" << n << ")" << endl;
+
+    if (n == 0) 
+        return 0;
+    
+    if (n == 1) 
+        return 1;
+    
+    return fib(n - 2) + fib(n - 1);
+}
+
+int main() {
+    cout << fib(5) << endl;
+    return 0;
+}

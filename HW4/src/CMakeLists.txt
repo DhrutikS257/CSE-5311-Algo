@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(SOURCES 
     problem1.cpp
     problem2.cpp
+    fib.cpp
 )
 
 foreach(SourceFile ${SOURCES})
