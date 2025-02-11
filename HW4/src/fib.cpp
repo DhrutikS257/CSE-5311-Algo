@@ -2,9 +2,7 @@
 
 using namespace std;
 
-int fib(uint n) {
-    cout << "fib(" << n << ")" << endl;
-
+int fib(int n) {
     if (n == 0) 
         return 0;
     
