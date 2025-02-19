@@ -15,7 +15,7 @@ int right(int i) {
     return 2*i + 1;
 }
 
-struct heap_data
+struct node
 {
     int key;
     int data;
@@ -41,7 +41,18 @@ void min_heapify(vector<int>& arr, int i) {
     }
 }
 
-vector<heap_data> build_min_heap(vector<int>& arr){
+vector<node> build_nodes(vector<int>& arr) {
+    vector<node> nodes;
+    for (int i = 0; i < arr.size(); i++) {
+        node n;
+        n.key = arr[i];
+        n.data = arr[i];
+        nodes.push_back(n);
+    }
+    return nodes;
+}
+
+vector<node> build_min_heap(vector<node>& arr){
     
 }
 
@@ -52,6 +63,9 @@ int main() {
     cout << "Original array: ";
     for (int i = 0; i < arr1.size(); i++)
         cout << arr1[i] << " ";
+
+    for (int i = arr1.size()/2; i >= 0; i--)
+        min_heapify(arr1, i);
 
     cout << "\nMin-Heap after heapify operation: ";
     for (int i = 0; i < arr1.size(); i++)
