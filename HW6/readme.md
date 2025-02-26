@@ -97,6 +97,3 @@ hw6-1  |   Randomized Quick Sort  : 4.244 ms
 ---
 ## Output Graph
 ![Sort Graph](./quick_sort_times.png)
-
----
-## Average Time Complexity
