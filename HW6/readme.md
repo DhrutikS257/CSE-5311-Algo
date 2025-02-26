@@ -94,6 +94,8 @@ hw6-1  | Worst Case:
 hw6-1  |   Standard Quick Sort    : 18.087 ms
 hw6-1  |   Randomized Quick Sort  : 4.244 ms
 ```
-
-## Output Graph:
+---
+## Output Graph
 ![Sort Graph](./quick_sort_times.png)
+---
+## Average Time Complexity
