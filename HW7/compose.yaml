@@ -1,0 +1,5 @@
+services:
+  hw7:
+    build:
+      context: .
+      dockerfile: Dockerfile
