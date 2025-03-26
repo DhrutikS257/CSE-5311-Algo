@@ -1,0 +1,7 @@
+hash_func multiplication
+table_size 5
+insert 6 60
+insert 7 70
+insert 8 80
+search 6
+search 9

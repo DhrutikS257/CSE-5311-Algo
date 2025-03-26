@@ -1,0 +1,8 @@
+hash_func division
+table_size 6
+insert 20 200
+insert 26 260
+insert 32 320
+insert 38 380
+delete 26
+search 32

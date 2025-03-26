@@ -1,0 +1,12 @@
+hash_func division
+table_size 2
+insert 3 30
+insert 7 70
+insert 11 110
+insert 15 150
+insert 19 190
+delete 3
+delete 7
+delete 11
+delete 15
+delete 19

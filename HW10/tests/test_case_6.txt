@@ -1,0 +1,9 @@
+hash_func multiplication
+table_size 4
+insert 4 40
+insert 8 80
+insert 12 120
+insert 16 160
+delete 8
+delete 4
+search 4

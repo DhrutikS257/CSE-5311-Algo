@@ -1,0 +1,9 @@
+hash_func division
+table_size 3
+insert 1 100
+insert 2 200
+insert 3 300
+insert 4 400
+insert 5 500
+delete 3
+search 5

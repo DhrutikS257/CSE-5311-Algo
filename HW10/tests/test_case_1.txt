@@ -1,0 +1,10 @@
+hash_func division
+table_size 4
+insert 1 10
+insert 5 50
+insert 9 90
+insert 13 130
+search 5
+search 99
+delete 5
+search 5
