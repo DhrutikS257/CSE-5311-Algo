@@ -8,9 +8,7 @@ class Node:
         self.prev = prev
 
 def print_ascii_tree(root: Optional[Node]):
-        """
-        Prints the binary tree in an ASCII art style.
-        """
+        
         def _display_aux(node):
             # Returns a tuple: (list_of_lines, width, height, horizontal_root_position)
             if node.left is None and node.right is None:
