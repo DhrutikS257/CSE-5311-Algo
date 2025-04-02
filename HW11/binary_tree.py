@@ -1,4 +1,4 @@
-from helper import Node, print_ascii_tree
+from helper import BTNode as Node, print_ascii_tree
 from typing import Optional
 class BT:
 
@@ -50,6 +50,19 @@ class BT:
 
         return prev
 
+    def _transplant(self, u:Node, v:Node):
+        if u.prev is None:
+            self.root = v
+
+        elif u == u.prev.left:
+            u.prev.left = v
+
+        else:
+            u.prev.right = v
+
+        if v is not None:
+            v.prev = u.prev
+
     def insert(self, node:Node):
         prev_node = self._search_last_node(node.val)
         node.prev = prev_node
@@ -65,10 +78,26 @@ class BT:
 
     def delete(self, val:int):
         n = self.search(val)
-
+        
+        # Check if the node exists before attempting to delete it
         if n is None:
-            print(f"Node with value {val} not found")
             return
+            
+        if n.left == None:
+            self._transplant(n, n.right)
+
+        elif n.right == None:
+            self._transplant(n, n.left)
+
+        else:
+            y = self._minimum(n.right)
+            if y.prev != n:
+                self._transplant(y, y.right)
+                y.right = n.right
+                y.right.prev = y
+            self._transplant(n, y)
+            y.left = n.left
+            y.left.prev = y
 
 
 def run_test_from_file(filename):
@@ -89,11 +118,12 @@ def run_test_from_file(filename):
         elif command == "delete":
             val = int(parts[1])
             bt.delete(val)
+            print(f"Deleted ({val})")
 
 
         else:
             print(f"Unknown command: {line}")
-    print("=== Binary Tree State ===")
+    print("\n=== Binary Tree State ===")
     print_ascii_tree(bt.root)
 
 if __name__ == "__main__":

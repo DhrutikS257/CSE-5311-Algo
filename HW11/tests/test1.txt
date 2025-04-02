@@ -23,3 +23,5 @@ delete 398
 delete 330
 delete 344
 delete 364
+delete 402
+delete 363
