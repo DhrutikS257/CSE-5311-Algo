@@ -1,0 +1,29 @@
+delete
+add 5
+add 10
+add 15
+add 12
+print
+delete
+delete
+add 90
+print
+delete
+delete
+add 29
+add 25
+add 24
+add 90
+add 91
+add 92
+add 93
+add 94
+add 95
+add 96
+print
+delete
+delete
+delete
+delete
+delete
+print

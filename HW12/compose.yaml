@@ -1,0 +1,6 @@
+services:
+    dynamic_array:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: ["./build/dynamic_array"]
