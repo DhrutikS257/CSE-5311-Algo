@@ -1,0 +1,9 @@
+undershorts pants
+undershorts shoes
+pants belt
+pants shoes
+belt jacket
+shirt tie
+shirt belt
+tie jacket
+socks shoes
