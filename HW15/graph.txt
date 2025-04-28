@@ -1,0 +1,11 @@
+init s
+s y 5
+s t 10
+y t 3
+t y 2
+t x 1
+y z 2
+y x 9
+x z 4
+z x 6
+z s 7
